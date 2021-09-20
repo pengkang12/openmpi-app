@@ -7,7 +7,7 @@ FLAGS=-O3 -Wall -g -lm
 all: ${EXECS}
 
 k_means: k_means.c
-	${MPICC} ${FLAGS} -o k_means $^ 
+	${MPICC} ${FLAGS} -o k_means $^  -lm
 
 clean:
 	rm -r k_means k_means.dSYM

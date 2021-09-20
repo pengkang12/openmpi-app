@@ -50,7 +50,7 @@ void readDataPartial(char *file_name,double **data){
     int end = (mpirank+1)*pN;
     //printf("Rank %d range, %d-%d\n",mpirank,start,end);
     FILE *fp = fopen(file_name, "r");
-    const char s[1] = ",";
+    const char s[2] = ",";
     char *token;
     int i;
     int line_count=0;
@@ -83,7 +83,7 @@ void readDataPartial(char *file_name,double **data){
 void getInitialClustersFromData(char *file_name,double **centers){
     int indices[C];
     FILE *fp = fopen(file_name, "r");
-    const char s[1] = ",";
+    const char s[2] = ",";
     char *token;
     int i;
     int line_count=0;
