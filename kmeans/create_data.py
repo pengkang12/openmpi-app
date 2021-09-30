@@ -11,7 +11,7 @@ def npBlobs(n_samples=5, centers=[[1,1]], cluster_std=0.5):
     pn = int(np.ceil(n_samples/float(cn)))
     res = np.zeros((pn*cn,d))
     labels = np.zeros(pn*cn)
-    for i in range(cn):
+    for i in xrange(cn):
         c = centers[i]
         res[(i*pn):((i+1)*pn),:] = np.random.multivariate_normal(c, cov, (pn, ))
         labels[(i*pn):((i+1)*pn)] = i
